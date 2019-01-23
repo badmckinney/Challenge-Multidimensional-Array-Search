@@ -13,6 +13,7 @@ function locate(array, target) {
       }
     });
   }
+
   if (located === true) {
     return true;
   } else {
