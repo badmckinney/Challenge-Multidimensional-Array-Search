@@ -5,7 +5,7 @@ function locate(array, target) {
 
   while (checkStack.length > 0) {
     let next = checkStack.pop();
-    next.forEach(item => {
+    next.some(item => {
       if (item === target) {
         located = true;
       } else if (Array.isArray(item)) {
@@ -14,11 +14,16 @@ function locate(array, target) {
     });
   }
 
-  if (located === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return located;
 }
 
 module.exports = locate;
+
+// const isArray = Array.isArray(array);
+
+// if (!isArray) {return array === target; }
+// else if (isArray && array.length <= 0) { return false; }
+
+//   return array.some((current) => {
+//     return locate(current, target);
+//   });
