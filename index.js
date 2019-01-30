@@ -19,11 +19,3 @@ function locate(array, target) {
 
 module.exports = locate;
 
-// const isArray = Array.isArray(array);
-
-// if (!isArray) {return array === target; }
-// else if (isArray && array.length <= 0) { return false; }
-
-//   return array.some((current) => {
-//     return locate(current, target);
-//   });
